@@ -3,12 +3,15 @@ package com.vijay.jsonwizard.utils.zing;
 import android.app.Application;
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Typeface;
+import android.support.v7.widget.AppCompatTextView;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 
 import com.vijay.jsonwizard.BaseTest;
 import com.vijay.jsonwizard.R;
+import com.vijay.jsonwizard.constants.JsonFormConstants;
 import com.vijay.jsonwizard.utils.FormUtils;
 
 import org.json.JSONArray;
@@ -17,6 +20,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
@@ -27,6 +31,8 @@ import org.powermock.reflect.Whitebox;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.mockito.ArgumentMatchers.eq;
 
 @RunWith(PowerMockRunner.class)
 public class FormUtilsTest extends BaseTest {
@@ -106,6 +112,41 @@ public class FormUtilsTest extends BaseTest {
 
         int px = FormUtils.getValueFromSpOrDpOrPx(spString, context);
         Assert.assertEquals(expected, px);
+    }
+
+    @Test
+    public void testSetTextStyleBold(){
+        AppCompatTextView mockTextView = PowerMockito.mock(AppCompatTextView.class);
+        FormUtils.setTextStyle(JsonFormConstants.BOLD, mockTextView);
+        Mockito.verify(mockTextView).setTypeface(ArgumentMatchers.<Typeface>isNull(), eq(Typeface.BOLD));
+    }
+
+    @Test
+    public void testSetTextStyleItalic(){
+        AppCompatTextView mockTextView = PowerMockito.mock(AppCompatTextView.class);
+        FormUtils.setTextStyle(JsonFormConstants.ITALIC, mockTextView);
+        Mockito.verify(mockTextView).setTypeface(ArgumentMatchers.<Typeface>isNull(), eq(Typeface.ITALIC));
+    }
+
+    @Test
+    public void testSetTextStyleBoldItalic(){
+        AppCompatTextView mockTextView = PowerMockito.mock(AppCompatTextView.class);
+        FormUtils.setTextStyle(JsonFormConstants.BOLD_ITALIC, mockTextView);
+        Mockito.verify(mockTextView).setTypeface(ArgumentMatchers.<Typeface>isNull(), eq(Typeface.BOLD_ITALIC));
+    }
+
+    @Test
+    public void testSetTextStyleNormal(){
+        AppCompatTextView mockTextView = PowerMockito.mock(AppCompatTextView.class);
+        FormUtils.setTextStyle(JsonFormConstants.NORMAL, mockTextView);
+        Mockito.verify(mockTextView).setTypeface(ArgumentMatchers.<Typeface>isNull(), eq(Typeface.NORMAL));
+    }
+
+    @Test
+    public void testSetTextStyleUnknown(){
+        AppCompatTextView mockTextView = PowerMockito.mock(AppCompatTextView.class);
+        FormUtils.setTextStyle("normal", mockTextView);
+        Mockito.verify(mockTextView).setTypeface(ArgumentMatchers.<Typeface>isNull(), eq(Typeface.NORMAL));
     }
 
     @PrepareForTest({TextUtils.class, TypedValue.class, FormUtils.class})

@@ -31,7 +31,6 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.rey.material.util.ViewUtil;
-import com.vijay.jsonwizard.BuildConfig;
 import com.vijay.jsonwizard.NativeFormLibrary;
 import com.vijay.jsonwizard.R;
 import com.vijay.jsonwizard.constants.JsonFormConstants;
@@ -55,6 +54,7 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.smartregister.client.utils.BuildConfig;
 import org.smartregister.client.utils.contract.ClientFormContract;
 
 import java.io.BufferedReader;
