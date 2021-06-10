@@ -7,10 +7,11 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.CountDownTimer;
 import android.provider.Settings;
-import android.support.annotation.VisibleForTesting;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.VisibleForTesting;
 
 import com.emredavarci.circleprogressbar.CircleProgressBar;
 import com.rey.material.util.ViewUtil;

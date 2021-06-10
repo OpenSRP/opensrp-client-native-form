@@ -5,7 +5,6 @@
     android:minHeight="60dp">
 
     <com.rengwuxian.materialedittext.MaterialEditText
-        app:met_textColorHint="@color/text_hint_color"
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,7 +13,8 @@
         app:met_floatingLabelText=""
         app:met_floatingLabelTextSize="@dimen/default_text_size"
         app:met_primaryColor="?colorAccent"
-        app:met_singleLineEllipsis="true" />
+        app:met_singleLineEllipsis="true"
+        app:met_textColorHint="@color/text_hint_color" />
 
     <TextView
         android:id="@+id/duration"

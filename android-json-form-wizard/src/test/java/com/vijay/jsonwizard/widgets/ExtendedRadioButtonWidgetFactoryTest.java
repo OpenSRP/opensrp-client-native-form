@@ -1,9 +1,10 @@
 package com.vijay.jsonwizard.widgets;
 
-import android.support.constraint.ConstraintLayout;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.vijay.jsonwizard.constants.JsonFormConstants;
 import com.vijay.jsonwizard.fragments.JsonFormFragment;

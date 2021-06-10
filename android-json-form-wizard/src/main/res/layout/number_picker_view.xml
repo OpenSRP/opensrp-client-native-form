@@ -3,8 +3,8 @@
     android:id="@+id/pickers"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:orientation="horizontal"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="horizontal">
 
     <NumberPicker
         android:id="@+id/day"

@@ -2,9 +2,10 @@ package com.vijay.jsonwizard.customviews;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.support.annotation.VisibleForTesting;
 import android.view.Window;
 import android.widget.LinearLayout;
+
+import androidx.annotation.VisibleForTesting;
 
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;

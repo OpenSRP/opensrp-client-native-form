@@ -118,7 +118,7 @@ public class DatePickerDialogTest extends BaseTest {
         when(activity.getSystemService(Context.INPUT_METHOD_SERVICE)).thenReturn(inputManager);
         when(activity.getCurrentFocus()).thenReturn(mock(View.class));
         datePickerDialog.onCreateView(LayoutInflater.from(RuntimeEnvironment.application), null, null);
-        onShowListener = (DialogInterface.OnShowListener) spy(Whitebox.getInternalState(datePickerDialog, "onShowListener"));
+        onShowListener = spy(Whitebox.getInternalState(datePickerDialog, "onShowListener"));
         onShowListener.onShow(dialog);
         verify(activity).getSystemService(Context.INPUT_METHOD_SERVICE);
         verify(activity).getCurrentFocus();

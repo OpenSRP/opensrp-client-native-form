@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:theme="@style/AppTheme.AppBarOverlay">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/navigation_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -26,8 +26,8 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:background="@android:color/transparent"
-                android:paddingEnd="@dimen/form_container_small_padding"
                 android:paddingStart="@dimen/form_container_drawable_padding"
+                android:paddingEnd="@dimen/form_container_small_padding"
                 android:rotationY="@integer/locale_mirror_flip"
                 android:src="@drawable/ic_action_back" />
 
@@ -36,13 +36,13 @@
                 android:id="@+id/step_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_toEndOf="@+id/previous_icon"
                 android:layout_toStartOf="@+id/next_icon"
+                android:layout_toEndOf="@+id/previous_icon"
                 android:background="@android:color/transparent"
                 android:ellipsize="end"
                 android:gravity="center"
-                android:paddingEnd="@dimen/form_container_drawable_padding"
                 android:paddingStart="0dp"
+                android:paddingEnd="@dimen/form_container_drawable_padding"
                 android:singleLine="true"
                 android:textColor="@color/white"
                 android:textSize="@dimen/form_container_step_title_text_size" />
@@ -55,13 +55,13 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:background="@android:color/transparent"
-                android:paddingEnd="@dimen/form_container_drawable_padding"
                 android:paddingStart="@dimen/form_container_small_padding"
+                android:paddingEnd="@dimen/form_container_drawable_padding"
                 android:rotationY="@integer/locale_mirror_flip"
                 android:src="@drawable/ic_action_next" />
 
 
         </RelativeLayout>
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
-</android.support.design.widget.AppBarLayout>
+</com.google.android.material.appbar.AppBarLayout>

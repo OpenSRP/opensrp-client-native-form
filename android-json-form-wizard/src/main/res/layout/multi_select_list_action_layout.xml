@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/multi_select_list_action_layout"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:clickable="true"
     android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:id="@+id/multi_select_list_action_layout"
-    android:layout_height="match_parent">
+    android:focusableInTouchMode="true">
+
     <Button
         android:id="@+id/btn_multi_select_action"
-        android:textStyle="normal"
-        android:textAllCaps="false"
         android:layout_width="match_parent"
-        android:background="@color/transparent"
         android:layout_height="wrap_content"
-        android:textSize="23sp"
-        android:textColor="@color/opensrp_accent"
+        android:background="@color/transparent"
         android:gravity="center|start"
-        android:typeface="normal"
-        />
+        android:textAllCaps="false"
+        android:textColor="@color/opensrp_accent"
+        android:textSize="23sp"
+        android:textStyle="normal"
+        android:typeface="normal" />
+
     <View
-        android:layout_below="@id/btn_multi_select_action"
-        android:background="@color/primary_text"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_below="@id/btn_multi_select_action"
         android:layout_marginBottom="10dp"
+        android:background="@color/primary_text"
 
         />
 </RelativeLayout>

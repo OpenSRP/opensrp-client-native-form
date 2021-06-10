@@ -2,12 +2,13 @@ package org.smartregister.nativeform_tester;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.vijay.jsonwizard.activities.JsonFormActivity;
 import com.vijay.jsonwizard.activities.JsonFormBaseActivity;
@@ -187,7 +188,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 }
                 default: {
-
 
                     String currentEntityID = (entityId == null) ? "ABC" + Math.random() : entityId;
 

@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:minHeight="60dp">
 
     <com.vijay.jsonwizard.customviews.NativeEditText
@@ -9,27 +9,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="12dp"
         android:layout_marginEnd="12dp"
-        android:layout_toLeftOf="@+id/normal_edit_text_edit_button"
+        android:layout_marginRight="12dp"
         android:layout_toStartOf="@+id/normal_edit_text_edit_button"
-        android:textColorHint="@color/text_hint_color"
+        android:layout_toLeftOf="@+id/normal_edit_text_edit_button"
         android:maxLines="1"
         android:paddingStart="8dp"
         android:paddingLeft="8dp"
         android:paddingEnd="8dp"
         android:paddingRight="8dp"
         android:singleLine="true"
+        android:textColorHint="@color/text_hint_color"
         android:textSize="@dimen/default_text_size" />
+
     <ImageView
-        android:background="@null"
         android:id="@+id/normal_edit_text_edit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_gravity="center_vertical"
+        android:background="@null"
         android:contentDescription="@string/info_label"
-        app:srcCompat="@drawable/edit_button_bg"
-        android:visibility="gone" />
+        android:visibility="gone"
+        app:srcCompat="@drawable/edit_button_bg" />
 </RelativeLayout>

@@ -8,7 +8,7 @@ import org.junit.Test;
 
 
 public class LessThanEqualToComparisonTest extends BaseTest {
-    
+
     @Test
     public void compareShouldReturnTrueWhenSecondStringsIsAlphabeticallyRankedHigher() {
 
@@ -59,9 +59,9 @@ public class LessThanEqualToComparisonTest extends BaseTest {
     }
 
     @Test
-    public void compareShouldReturnTrueWhenTheNumbersAreEquals(){
+    public void compareShouldReturnTrueWhenTheNumbersAreEquals() {
         LessThanEqualToComparison comparison = new LessThanEqualToComparison();
-        Assert.assertEquals(true , comparison.compare("2", TestConstants.TYPE_NUMERIC, "2"));
+        Assert.assertEquals(true, comparison.compare("2", TestConstants.TYPE_NUMERIC, "2"));
     }
 
     @Test

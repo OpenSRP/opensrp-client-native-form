@@ -1,6 +1,6 @@
 package com.vijay.jsonwizard.domain;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 public class MultiSelectItem {
     private String key;

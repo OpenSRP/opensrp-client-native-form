@@ -351,7 +351,7 @@ public class JsonFormMLSAssetGenerator {
                 ? "com.vijay.jsonwizard.interactors.JsonFormInteractor" : jsonFormInteractorName;
         Class<?> clazz = Class.forName(jsonFormInteractorName);
         Method factoryMethod = clazz.getDeclaredMethod("getInstance");
-        return (JsonFormInteractor) factoryMethod.invoke(null,  (Object[]) null);
+        return (JsonFormInteractor) factoryMethod.invoke(null, (Object[]) null);
     }
 
     public static void main(String[] args) throws Exception {

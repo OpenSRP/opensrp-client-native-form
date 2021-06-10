@@ -42,7 +42,7 @@ import java.util.Map;
 import java.util.Set;
 
 import static android.os.Looper.getMainLooper;
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.core.Is.is;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doReturn;

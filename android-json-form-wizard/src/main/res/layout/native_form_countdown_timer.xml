@@ -6,20 +6,19 @@
     <TextView
         android:id="@+id/timerLabel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content" />
 
     <com.emredavarci.circleprogressbar.CircleProgressBar xmlns:cpb="http://schemas.android.com/apk/res-auto"
         android:id="@+id/progressCircularBar"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:layout_below="@id/timerLabel"
         android:layout_centerInParent="true"
         android:layout_marginTop="50dp"
         cpb:backgroundWidth="2"
         cpb:prefix=""
         cpb:roundedCorners="true"
         cpb:suffix=""
-        cpb:textSize="50sp"
-        android:layout_below="@id/timerLabel"/>
+        cpb:textSize="50sp" />
 
 </RelativeLayout>

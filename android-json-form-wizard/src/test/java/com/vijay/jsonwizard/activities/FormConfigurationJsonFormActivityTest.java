@@ -3,8 +3,9 @@ package com.vijay.jsonwizard.activities;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.view.Window;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.vijay.jsonwizard.NativeFormLibrary;
 import com.vijay.jsonwizard.R;
@@ -61,7 +62,7 @@ public class FormConfigurationJsonFormActivityTest extends BaseActivityTest {
         formConfigurationJsonFormActivity.getRules(RuntimeEnvironment.application, rulesFileIdentifier);
         Mockito.verify(formUtils).getRulesFromRepository(
                 Mockito.eq(RuntimeEnvironment.application),
-                Mockito.eq(clientFormRepository),Mockito.eq(rulesFileIdentifier));
+                Mockito.eq(clientFormRepository), Mockito.eq(rulesFileIdentifier));
     }
 
     @Test

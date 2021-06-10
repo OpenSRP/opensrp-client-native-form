@@ -1,9 +1,10 @@
 package org.smartregister.nativeform_tester.contract;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 
 import com.vijay.jsonwizard.domain.Form;
 

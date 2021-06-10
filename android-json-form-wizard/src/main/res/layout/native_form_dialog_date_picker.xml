@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dialog_content_margin"
         android:layout_marginEnd="@dimen/dialog_content_margin"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <com.vijay.jsonwizard.customviews.NumericDatePicker
         android:id="@+id/date_picker_numeric"

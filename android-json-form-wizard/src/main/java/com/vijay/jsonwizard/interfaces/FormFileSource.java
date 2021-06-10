@@ -1,7 +1,8 @@
 package com.vijay.jsonwizard.interfaces;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import org.jeasy.rules.api.Rules;
 import org.json.JSONObject;

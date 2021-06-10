@@ -5,9 +5,10 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+
+import androidx.annotation.NonNull;
 
 import com.rey.material.drawable.RippleDrawable;
 import com.rey.material.widget.RippleManager;

@@ -66,6 +66,7 @@
             android:src="@drawable/ic_icon_info_filled"
             android:visibility="gone" />
     </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/contentLayout"
         android:layout_width="match_parent"
@@ -117,6 +118,7 @@
         </LinearLayout>
 
     </LinearLayout>
+
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"

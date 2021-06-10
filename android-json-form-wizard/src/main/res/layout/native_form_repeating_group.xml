@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/reference_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <com.rengwuxian.materialedittext.MaterialEditText
-            app:met_textColorHint="@color/text_hint_color"
             android:id="@+id/reference_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="8"
             android:layout_marginEnd="12dp"
             android:layout_marginRight="12dp"
-            android:textSize="@dimen/default_text_size"
+            android:layout_weight="8"
             android:hint="Reference edit text field"
-            android:paddingLeft="20dp"
             android:imeOptions="actionDone"
+            android:paddingLeft="20dp"
+            android:textSize="@dimen/default_text_size"
             app:met_floatingLabel="highlight"
             app:met_floatingLabelText=""
             app:met_floatingLabelTextSize="@dimen/default_text_size"
             app:met_primaryColor="?colorAccent"
-            app:met_singleLineEllipsis="true" />
+            app:met_singleLineEllipsis="true"
+            app:met_textColorHint="@color/text_hint_color" />
+
         <ImageButton
             android:id="@+id/btn_repeating_group_done"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_done_grey"
             android:layout_gravity="center_vertical"
-            android:background="@color/white"/>
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:src="@drawable/ic_done_grey" />
     </LinearLayout>
 
 </LinearLayout>

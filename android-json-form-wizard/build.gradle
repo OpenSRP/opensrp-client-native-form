@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.3'
@@ -38,6 +38,10 @@ android {
             }
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     buildTypes {
         release {
@@ -67,7 +71,6 @@ android {
     }
 }
 
-
 tasks.withType(Test) {
     jacoco.includeNoLocationClasses = true
 }
@@ -78,22 +81,26 @@ repositories {
 }
 
 dependencies {
-    implementation('org.smartregister:opensrp-client-simprints:1.0.6-SNAPSHOT@aar') {
+    def core_version = "1.5.0"
+    implementation "androidx.core:core:$core_version"
+    implementation "androidx.appcompat:appcompat:1.3.0"
+    implementation "androidx.annotation:annotation:1.2.0"
+    implementation "androidx.recyclerview:recyclerview:1.2.0"
+    api('org.smartregister:opensrp-client-simprints:1.0.7-PREVIEW3-SNAPSHOT@aar') {
         transitive = true
         exclude group: 'com.android.support', module: 'appcompat-v7'
         exclude group: 'com.android.support', module: 'design'
     }
     implementation 'com.github.bmelnychuk:atv:1.2.9'
-    implementation('com.android.support:design:28.0.0') {
+    implementation('com.google.android.material:material:1.3.0') {
         exclude group: 'com.android.support', module: 'recyclerview-v7'
         exclude group: 'com.android.support', module: 'appcompat-v7'
         exclude group: 'com.android.support', module: 'support-v4'
-
     }
     implementation 'com.github.johnkil.print:print:1.3.1'
     implementation 'com.github.rey5137:material:1.2.5'
     implementation 'org.smartregister:opensrp-client-materialedittext:2.1.6-SNAPSHOT'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation('com.github.ganfra:material-spinner:2.0.0') {
         exclude group: 'com.nineoldandroids', module: 'library'
         exclude group: 'com.android.support', module: 'appcompat-v7'
@@ -101,24 +108,22 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.android.support', module: 'recyclerview-v7'
     }
-    implementation('com.google.android.gms:play-services-location:16.0.0') {
+    implementation('com.google.android.gms:play-services-location:18.0.0') {
         exclude group: 'com.android.support', module: 'appcompat-v7'
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.android.support', module: 'recyclerview-v7'
     }
-    implementation('com.google.android.gms:play-services-vision:17.0.2') {
+    implementation('com.google.android.gms:play-services-vision:20.1.3') {
         exclude group: 'com.android.support', module: 'appcompat-v7'
         exclude group: 'com.android.support', module: 'support-v4'
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.android.support', module: 'recyclerview-v7'
     }
-
     implementation 'org.smartregister:opensrp-client-utils:0.0.4-SNAPSHOT'
-
     implementation 'org.jeasy:easy-rules-core:3.3.0'
     implementation 'org.jeasy:easy-rules-mvel:3.3.0'
-    implementation 'joda-time:joda-time:2.10.5'
-    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'joda-time:joda-time:2.10.6'
+    implementation 'com.google.code.gson:gson:2.8.6'
     implementation('io.ona.rdt-capture:lib:2.1.0') {
         exclude group: 'com.android.support.constraint', module: 'constraint-layout'
         exclude group: 'com.android.support', module: 'design'
@@ -127,8 +132,7 @@ dependencies {
         exclude group: 'com.android.support.test.espresso', module: 'espresso-core'
         exclude group: 'com.google.android.gms', module: 'play-services-vision'
     }
-    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
-
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
     implementation('io.ona.CircleProgressbar:lib:0.1.0@aar') {
         exclude group: 'com.android.support.constraint', module: 'constraint-layout'
         exclude group: 'com.android.support', module: 'design'
@@ -137,50 +141,47 @@ dependencies {
         exclude group: 'com.android.support.test.espresso', module: 'espresso-core'
     }
     implementation 'com.jakewharton.timber:timber:4.7.1'
-    implementation 'org.greenrobot:eventbus:3.1.1'
-    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    // https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15
+   // implementation group: 'org.bouncycastle', name: 'bcprov-jdk15', version: '1.46'
 
     // PowerMock
-    def powerMockVersion = '2.0.4'
+    def powerMockVersion = '2.0.7'
     testImplementation "org.powermock:powermock-module-junit4:$powerMockVersion"
     testImplementation "org.powermock:powermock-module-junit4-rule:$powerMockVersion"
     testImplementation "org.powermock:powermock-api-mockito2:$powerMockVersion"
     testImplementation "org.powermock:powermock-classloading-xstream:$powerMockVersion"
     implementation('com.github.raihan-mpower:FancyAlertDialog-Android:0.3') {
         exclude group: 'com.android.support', module: 'appcompat-v7'
-
     }
 
     androidTestImplementation 'com.jayway.android.robotium:robotium-solo:5.6.3'
     androidTestImplementation 'com.google.dexmaker:dexmaker-mockito:1.2'
-    androidTestImplementation 'junit:junit:4.12'
-    androidTestImplementation("com.android.support.test:runner:1.0.2") {
+    androidTestImplementation 'junit:junit:4.13.2'
+    androidTestImplementation('androidx.test.ext:junit:1.1.2') {
         exclude group: 'com.android.support', module: 'appcompat-v7'
 
     }
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2', {
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-    androidTestImplementation('com.android.support.test:rules:1.0.2') {
+    androidTestImplementation('androidx.test:rules:1.3.0') {
         exclude group: 'com.android.support', module: 'appcompat-v7'
 
     }
-
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.apache.maven:maven-ant-tasks:2.1.3'
-    testImplementation 'org.mockito:mockito-core:3.1.0'
+    testImplementation 'org.mockito:mockito-core:3.5.15'
     testImplementation('com.squareup:fest-android:1.0.8') { exclude module: 'support-v4' }
-    testImplementation 'org.robolectric:robolectric:4.3.1'
+    testImplementation'org.robolectric:robolectric:4.4'
     testImplementation "org.json:json:20190722"
 }
 
 task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest', 'createDebugCoverageReport']) {
-
     reports {
-
         xml.enabled = true
         xml.destination = file("${buildDir}/reports/jacoco/jacocoRootReport/merged.xml")
-
         html.enabled = true
         html.destination file("${buildDir}/reports/jacoco/jacocoRootReport/html")
     }
@@ -204,9 +205,7 @@ coveralls {
     jacocoReportPath = "${buildDir}/reports/jacoco/jacocoRootReport/merged.xml"
 }
 
-
 apply from: '../maven.gradle'
-
 task javadoc(type: Javadoc) {
     failOnError false
     def mainSrc = "$project.projectDir/src/main/java"

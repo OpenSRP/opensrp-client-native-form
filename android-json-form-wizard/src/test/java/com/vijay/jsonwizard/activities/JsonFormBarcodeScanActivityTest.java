@@ -42,6 +42,18 @@ public class JsonFormBarcodeScanActivityTest extends BaseActivityTest {
         destroyController();
     }
 
+    private void destroyController() {
+        try {
+            barcodeScanActivity.finish();
+            controller.pause().stop().destroy(); //destroy controller if we can
+
+        } catch (Exception e) {
+            Log.e(getClass().getCanonicalName(), e.getMessage());
+        }
+
+        System.gc();
+    }
+
     @Test
     public void testActivityCreatedSuccessfully() {
         Assert.assertNotNull(barcodeScanActivity);
@@ -63,17 +75,5 @@ public class JsonFormBarcodeScanActivityTest extends BaseActivityTest {
         Assert.assertEquals(2, barcodeSparseArray.size());
 
         barcodeScanActivity.receiveDetections(detections);
-    }
-
-    private void destroyController() {
-        try {
-            barcodeScanActivity.finish();
-            controller.pause().stop().destroy(); //destroy controller if we can
-
-        } catch (Exception e) {
-            Log.e(getClass().getCanonicalName(), e.getMessage());
-        }
-
-        System.gc();
     }
 }

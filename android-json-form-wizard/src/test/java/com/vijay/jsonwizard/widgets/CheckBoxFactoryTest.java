@@ -1,12 +1,13 @@
 package com.vijay.jsonwizard.widgets;
 
 import android.content.res.Resources;
-import android.support.constraint.ConstraintLayout;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.vijay.jsonwizard.BaseTest;
 import com.vijay.jsonwizard.R;

@@ -1,84 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar_parent_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/generic_toolbar"
+        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/customAppThemeBlue"
-            app:contentInsetLeft="10dp"
-            app:contentInsetStart="10dp"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
+            android:layout_height="?android:attr/actionBarSize"
+            android:orientation="horizontal">
 
-
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="?android:attr/actionBarSize"
-                android:orientation="horizontal">
+                android:layout_height="match_parent">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:id="@+id/imageButton"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent">
 
-                    <LinearLayout
-                        android:id="@+id/imageButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
-
-                        <ImageButton
-                            android:id="@+id/generic_dialog_cancel_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="@android:color/transparent"
-                            android:paddingStart="@dimen/advanced_search_toolbar_drawable_padding"
-                            android:paddingEnd="@dimen/advanced_search_toolbar_padding"
-                            android:src="@drawable/ic_clear" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/txt_title_label"
+                    <ImageButton
+                        android:id="@+id/generic_dialog_cancel_button"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="6dp"
-                        android:layout_toStartOf="@+id/generic_dialog_done_button"
-                        android:layout_toLeftOf="@+id/generic_dialog_done_button"
-                        android:layout_toEndOf="@+id/imageButton"
-                        android:layout_toRightOf="@+id/imageButton"
-                        android:gravity="center_vertical"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/white" />
-
-
-                    <Button
-                        android:id="@+id/generic_dialog_done_button"
-                        style="?android:attr/borderlessButtonStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_gravity="right|center_horizontal|end"
-                        android:background="@color/transparent"
+                        android:background="@android:color/transparent"
                         android:paddingStart="@dimen/advanced_search_toolbar_drawable_padding"
-                        android:paddingEnd="@dimen/advanced_search_toolbar_drawable_padding"
-                        android:text="@string/save"
-                        android:textAllCaps="true"
-                        android:textAppearance="?android:textAppearanceSmall"
-                        android:textColor="@color/status_bar_text_almost_white"
-                        android:textSize="@dimen/advanced_search_toolbar_text_size" />
-                </RelativeLayout>
-            </LinearLayout>
-        </android.support.v7.widget.Toolbar>
+                        android:paddingEnd="@dimen/advanced_search_toolbar_padding"
+                        android:src="@drawable/ic_clear" />
+                </LinearLayout>
 
-    </android.support.design.widget.AppBarLayout>
+                <TextView
+                    android:id="@+id/txt_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="6dp"
+                    android:layout_toStartOf="@+id/generic_dialog_done_button"
+                    android:layout_toLeftOf="@+id/generic_dialog_done_button"
+                    android:layout_toEndOf="@+id/imageButton"
+                    android:layout_toRightOf="@+id/imageButton"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white" />
 
+                <Button
+                    android:id="@+id/generic_dialog_done_button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="right|center_horizontal|end"
+                    android:background="@color/transparent"
+                    android:paddingStart="@dimen/advanced_search_toolbar_drawable_padding"
+                    android:paddingEnd="@dimen/advanced_search_toolbar_drawable_padding"
+                    android:text="@string/save"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/status_bar_text_almost_white"
+                    android:textSize="@dimen/advanced_search_toolbar_text_size" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 </LinearLayout>

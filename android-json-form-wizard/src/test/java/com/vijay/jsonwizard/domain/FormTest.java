@@ -20,12 +20,12 @@ public class FormTest {
         Form form = new Form();
 
         assertEquals(0, form.getActionBarBackground());
-        assertEquals(0,form.getBackIcon());
+        assertEquals(0, form.getBackIcon());
         assertNull(form.getDisabledFields());
         assertNull(form.getHiddenFields());
-        assertEquals(0,form.getHomeAsUpIndicator());
+        assertEquals(0, form.getHomeAsUpIndicator());
         assertNull(form.getName());
-        assertEquals(0,form.getNavigationBackground());
+        assertEquals(0, form.getNavigationBackground());
         assertNull(form.getNextLabel());
         assertNull(form.getPreviousLabel());
         assertNull(form.getSaveLabel());
@@ -33,13 +33,13 @@ public class FormTest {
         assertFalse(form.isHidePreviousButton());
         assertFalse(form.isHideSaveLabel());
         assertTrue(form.isWizard());
-        assertNull(form.getDatePickerDisplayFormat());
+        assertNull(Form.getDatePickerDisplayFormat());
 
         form.setActionBarBackground(1);
         assertEquals(1, form.getActionBarBackground());
 
         form.setBackIcon(2);
-        assertEquals(2,form.getBackIcon());
+        assertEquals(2, form.getBackIcon());
 
         Set<String> disabledFields = new HashSet<>();
         form.setDisabledFields(disabledFields);
@@ -50,13 +50,13 @@ public class FormTest {
         assertEquals(hiddenFields, form.getHiddenFields());
 
         form.setHomeAsUpIndicator(3);
-        assertEquals(3,form.getHomeAsUpIndicator());
+        assertEquals(3, form.getHomeAsUpIndicator());
 
         form.setName("form_name");
         assertEquals("form_name", form.getName());
 
         form.setNavigationBackground(4);
-        assertEquals(4,form.getNavigationBackground());
+        assertEquals(4, form.getNavigationBackground());
 
         form.setNextLabel("next_label");
         assertEquals("next_label", form.getNextLabel());
@@ -80,6 +80,6 @@ public class FormTest {
         assertFalse(form.isWizard());
 
         form.setDatePickerDisplayFormat("display_format");
-        assertEquals("display_format", form.getDatePickerDisplayFormat());
+        assertEquals("display_format", Form.getDatePickerDisplayFormat());
     }
 }

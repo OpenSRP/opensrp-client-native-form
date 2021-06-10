@@ -1,6 +1,6 @@
 package com.vijay.jsonwizard.interfaces;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.smartregister.client.utils.contract.ClientFormContract;
 

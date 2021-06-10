@@ -1,9 +1,10 @@
 package com.vijay.jsonwizard.widgets;
 
 import android.content.Context;
-import android.support.annotation.VisibleForTesting;
 import android.view.LayoutInflater;
 import android.view.View;
+
+import androidx.annotation.VisibleForTesting;
 
 import com.vijay.jsonwizard.R;
 import com.vijay.jsonwizard.constants.JsonFormConstants;

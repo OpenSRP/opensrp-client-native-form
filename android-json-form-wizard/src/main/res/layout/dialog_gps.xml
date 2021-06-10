@@ -1,43 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/extra_bottom_margin"
         android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal">
+        android:layout_marginTop="@dimen/extra_bottom_margin"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
         <ProgressBar
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:indeterminate="true"
+            android:layout_gravity="center_vertical"
             android:layout_marginStart="30dp"
-            android:layout_gravity="center_vertical"/>
+            android:indeterminate="true" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
             android:layout_marginStart="@dimen/inner_components_spacing"
             android:layout_marginEnd="@dimen/inner_components_spacing"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
+
             <com.rey.material.widget.TextView
                 android:id="@+id/accuracy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/default_text_size"
-                android:text="@string/unknown_gps_accuracy" />
+                android:text="@string/unknown_gps_accuracy"
+                android:textSize="@dimen/default_text_size" />
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal"
         android:layout_marginTop="@dimen/extra_bottom_margin"
-        android:layout_marginBottom="@dimen/extra_bottom_margin">
+        android:layout_marginBottom="@dimen/extra_bottom_margin"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/cancel_button"
@@ -52,8 +57,8 @@
             android:id="@+id/ok_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="15dp"
             android:layout_marginStart="7.5dp"
+            android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:text="@string/ok" />
     </LinearLayout>

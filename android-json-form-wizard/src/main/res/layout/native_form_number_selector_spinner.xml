@@ -6,9 +6,9 @@
     android:layout_width="160dp"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
+    android:minWidth="160dp"
     android:orientation="horizontal"
     android:padding="8dp"
-    android:minWidth="160dp"
     app:cardBackgroundColor="@android:color/white">
 
     <TextView

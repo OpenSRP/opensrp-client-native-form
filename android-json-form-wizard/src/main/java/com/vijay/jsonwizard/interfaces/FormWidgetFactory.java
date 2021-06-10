@@ -1,8 +1,9 @@
 package com.vijay.jsonwizard.interfaces;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.view.View;
+
+import androidx.annotation.NonNull;
 
 import com.vijay.jsonwizard.fragments.JsonFormFragment;
 

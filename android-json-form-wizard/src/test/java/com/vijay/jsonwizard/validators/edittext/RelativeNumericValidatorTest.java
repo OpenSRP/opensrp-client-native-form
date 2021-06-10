@@ -18,9 +18,6 @@ import static org.mockito.Mockito.doReturn;
  */
 public class RelativeNumericValidatorTest {
 
-    @Mock
-    private JsonFormFragment formFragment;
-
     private final String form = "{\n" +
             "  \"count\": \"1\",\n" +
             "  \"encounter_type\": \"patient_registration\",\n" +
@@ -86,6 +83,8 @@ public class RelativeNumericValidatorTest {
             "    ]\n" +
             "  }\n" +
             "}";
+    @Mock
+    private JsonFormFragment formFragment;
 
     @Before
     public void setUp() throws JSONException {

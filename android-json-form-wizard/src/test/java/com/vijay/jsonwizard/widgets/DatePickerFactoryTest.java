@@ -2,10 +2,11 @@ package com.vijay.jsonwizard.widgets;
 
 import android.app.FragmentManager;
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.rengwuxian.materialedittext.MaterialEditText;
 import com.vijay.jsonwizard.BaseTest;

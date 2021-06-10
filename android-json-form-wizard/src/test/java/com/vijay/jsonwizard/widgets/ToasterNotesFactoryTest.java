@@ -86,7 +86,7 @@ public class ToasterNotesFactoryTest extends BaseTest {
         String labelString = "{\"key\":\"ultrasound_info_toaster\",\"openmrs_entity_parent\":\"\",\"openmrs_entity\":\"\",\"openmrs_entity_id\":\"\",\"type\":\"toaster_notes\",\"text\":\"Test toaster notes\",\"toaster_type\":\"info\",\"relevance\":{\"rules-engine\":{\"ex-rules\":{\"rules-file\":\"ultrasound_sub_form_relevance_rules.yml\"}}},\"calculation\":{\"rules-engine\":{\"ex-rules\":{\"rules-file\":\"ultrasound_sub_form_calculation_rules.yml\"}}},\"constraints\":{\"rules-engine\":{\"ex-rules\":{\"rules-file\":\"ultrasound_sub_form_constraints_rules.yml\"}}}}";
         List<View> viewList = factorySpy.getViewsFromJson("RandomStepName", context, formFragment, new JSONObject(labelString), listener);
         Assert.assertNotNull(viewList);
-        Assert.assertEquals(1,viewList.size());
+        Assert.assertEquals(1, viewList.size());
     }
 
     @Test
@@ -116,7 +116,7 @@ public class ToasterNotesFactoryTest extends BaseTest {
         String labelString = "{\"key\":\"ultrasound_info_toaster\",\"openmrs_entity_parent\":\"\",\"openmrs_entity\":\"\",\"openmrs_entity_id\":\"\",\"type\":\"toaster_notes\",\"text\":\"Test toaster notes\",\"toaster_type\":\"warning\",\"relevance\":{\"rules-engine\":{\"ex-rules\":{\"rules-file\":\"ultrasound_sub_form_relevance_rules.yml\"}}},\"calculation\":{\"rules-engine\":{\"ex-rules\":{\"rules-file\":\"ultrasound_sub_form_calculation_rules.yml\"}}},\"constraints\":{\"rules-engine\":{\"ex-rules\":{\"rules-file\":\"ultrasound_sub_form_constraints_rules.yml\"}}}}";
         List<View> viewList = factorySpy.getViewsFromJson("RandomStepName", context, formFragment, new JSONObject(labelString), listener);
         Assert.assertNotNull(viewList);
-        Assert.assertEquals(1,viewList.size());
+        Assert.assertEquals(1, viewList.size());
     }
 
     @Test
@@ -146,7 +146,7 @@ public class ToasterNotesFactoryTest extends BaseTest {
         String labelString = "{\"key\":\"ultrasound_info_toaster\",\"openmrs_entity_parent\":\"\",\"openmrs_entity\":\"\",\"openmrs_entity_id\":\"\",\"type\":\"toaster_notes\",\"text\":\"Test toaster notes\",\"toaster_type\":\"problem\",\"toaster_info_text\":\"Toaster text\",\"toaster_info_title\":\"Toaster titles\",\"relevance\":{\"rules-engine\":{\"ex-rules\":{\"rules-file\":\"ultrasound_sub_form_relevance_rules.yml\"}}},\"calculation\":{\"rules-engine\":{\"ex-rules\":{\"rules-file\":\"ultrasound_sub_form_calculation_rules.yml\"}}},\"constraints\":{\"rules-engine\":{\"ex-rules\":{\"rules-file\":\"ultrasound_sub_form_constraints_rules.yml\"}}}}";
         List<View> viewList = factorySpy.getViewsFromJson("RandomStepName", context, formFragment, new JSONObject(labelString), listener);
         Assert.assertNotNull(viewList);
-        Assert.assertEquals(1,viewList.size());
+        Assert.assertEquals(1, viewList.size());
     }
 
     @Test
@@ -176,6 +176,6 @@ public class ToasterNotesFactoryTest extends BaseTest {
         String labelString = "{\"key\":\"ultrasound_info_toaster\",\"openmrs_entity_parent\":\"\",\"openmrs_entity\":\"\",\"openmrs_entity_id\":\"\",\"type\":\"toaster_notes\",\"text\":\"Test toaster notes\",\"toaster_type\":\"positive\",\"relevance\":{\"rules-engine\":{\"ex-rules\":{\"rules-file\":\"ultrasound_sub_form_relevance_rules.yml\"}}},\"calculation\":{\"rules-engine\":{\"ex-rules\":{\"rules-file\":\"ultrasound_sub_form_calculation_rules.yml\"}}},\"constraints\":{\"rules-engine\":{\"ex-rules\":{\"rules-file\":\"ultrasound_sub_form_constraints_rules.yml\"}}}}";
         List<View> viewList = factorySpy.getViewsFromJson("RandomStepName", context, formFragment, new JSONObject(labelString), listener);
         Assert.assertNotNull(viewList);
-        Assert.assertEquals(1,viewList.size());
+        Assert.assertEquals(1, viewList.size());
     }
 }

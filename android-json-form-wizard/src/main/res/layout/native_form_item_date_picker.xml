@@ -5,7 +5,6 @@
     android:minHeight="60dp">
 
     <com.rengwuxian.materialedittext.MaterialEditText
-        app:met_textColorHint="@color/text_hint_color"
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,7 +13,8 @@
         app:met_floatingLabelText=""
         app:met_floatingLabelTextSize="@dimen/default_text_size"
         app:met_primaryColor="?colorAccent"
-        app:met_singleLineEllipsis="true" />
+        app:met_singleLineEllipsis="true"
+        app:met_textColorHint="@color/text_hint_color" />
 
     <TextView
         android:id="@+id/duration"
@@ -24,6 +24,7 @@
         android:layout_marginStart="@dimen/date_duration_left_margin"
         android:paddingBottom="15dp"
         android:textSize="@dimen/default_text_size" />
+
     <ImageView
         android:id="@+id/date_picker_info_icon"
         android:layout_width="@dimen/default_info_icon_size"

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/native_form_text_and_image"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -9,11 +8,11 @@
 
     <TextView
         android:id="@+id/imageViewLabel"
-        android:layout_below="@+id/image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_below="@+id/image"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
         android:paddingBottom="20dp"
@@ -21,16 +20,15 @@
 
     <ImageView
         android:id="@+id/image"
-        android:src="@drawable/finger_print"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:scaleType="fitXY"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-         />
+        android:scaleType="fitXY"
+        android:src="@drawable/finger_print" />
 
 </RelativeLayout>

@@ -2,11 +2,12 @@ package com.vijay.jsonwizard.views;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.support.annotation.ColorInt;
-import android.support.v7.widget.AppCompatTextView;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.util.AttributeSet;
+
+import androidx.annotation.ColorInt;
+import androidx.appcompat.widget.AppCompatTextView;
 
 import com.vijay.jsonwizard.R;
 

@@ -15,20 +15,18 @@ import static com.vijay.jsonwizard.utils.Utils.convertStreamToString;
  */
 public class TestUtils {
 
-    public String getBasePackageFilePath() {
-        return Paths.get(".").toAbsolutePath().normalize().toString();
-    }
-
-    public String getResourcesFilePath() {
-        return getBasePackageFilePath() + "/src/test/resources";
+    public String getResourceFileContentsAsString(String filePath) {
+        return convertStreamToString(getTestResource(filePath));
     }
 
     public InputStream getTestResource(String filePath) {
         return getClass().getClassLoader().getResourceAsStream(filePath);
     }
 
-    public String getResourceFileContentsAsString(String filePath) {
-        return convertStreamToString(getTestResource(filePath));
+    public void copyFilesIntoResourcesFolder(String sourcePath) {
+        String[] filePath = sourcePath.split(File.separator);
+        String fileName = filePath[filePath.length - 1];
+        copyFile(sourcePath, getResourcesFilePath() + File.separator + fileName);
     }
 
     public void copyFile(String sourcePath, String destPath) {
@@ -40,10 +38,8 @@ public class TestUtils {
         }
     }
 
-    public void copyFilesIntoResourcesFolder(String sourcePath) {
-        String[] filePath = sourcePath.split(File.separator);
-        String fileName = filePath[filePath.length - 1];
-        copyFile(sourcePath, getResourcesFilePath() + File.separator + fileName);
+    public String getResourcesFilePath() {
+        return getBasePackageFilePath() + "/src/test/resources";
     }
 
     public void deleteFile(String filePath) {
@@ -51,5 +47,9 @@ public class TestUtils {
         if (file.exists()) {
             file.delete();
         }
+    }
+
+    public String getBasePackageFilePath() {
+        return Paths.get(".").toAbsolutePath().normalize().toString();
     }
 }

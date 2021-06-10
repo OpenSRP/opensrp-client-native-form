@@ -2,7 +2,8 @@ package com.vijay.jsonwizard.filesource;
 
 import android.content.Context;
 import android.os.Environment;
-import android.support.annotation.VisibleForTesting;
+
+import androidx.annotation.VisibleForTesting;
 
 import com.vijay.jsonwizard.constants.JsonFormConstants;
 import com.vijay.jsonwizard.interfaces.FormFileSource;

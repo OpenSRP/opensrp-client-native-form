@@ -25,9 +25,9 @@
                 android:layout_margin="@dimen/form_container_default_margin"
                 android:orientation="vertical"
                 android:padding="10dp"
-                android:paddingEnd="@dimen/form_container_default_padding"
                 android:paddingStart="@dimen/form_container_default_padding"
-                android:paddingTop="8dp" />
+                android:paddingTop="8dp"
+                android:paddingEnd="@dimen/form_container_default_padding" />
 
             <RelativeLayout
                 android:id="@+id/bottom_navigation_layout"
@@ -42,10 +42,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toStartOf="@+id/next"
-                    android:paddingBottom="@dimen/form_container_top_bottom_navigation_padding"
-                    android:paddingEnd="@dimen/form_container_start_end_navigation_padding"
                     android:paddingStart="@dimen/form_container_start_end_navigation_padding"
                     android:paddingTop="@dimen/form_container_top_bottom_navigation_padding"
+                    android:paddingEnd="@dimen/form_container_start_end_navigation_padding"
+                    android:paddingBottom="@dimen/form_container_top_bottom_navigation_padding"
                     android:text="@string/previous"
                     android:textAllCaps="true"
                     android:textAppearance="?android:textAppearanceMedium"
@@ -59,10 +59,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_marginStart="@dimen/form_container_default_margin"
-                    android:paddingBottom="@dimen/form_container_top_bottom_navigation_padding"
-                    android:paddingEnd="@dimen/form_container_start_end_navigation_padding"
                     android:paddingStart="@dimen/form_container_start_end_navigation_padding"
                     android:paddingTop="@dimen/form_container_top_bottom_navigation_padding"
+                    android:paddingEnd="@dimen/form_container_start_end_navigation_padding"
+                    android:paddingBottom="@dimen/form_container_top_bottom_navigation_padding"
                     android:text="@string/next"
                     android:textAllCaps="true"
                     android:textAppearance="?android:textAppearanceMedium"
