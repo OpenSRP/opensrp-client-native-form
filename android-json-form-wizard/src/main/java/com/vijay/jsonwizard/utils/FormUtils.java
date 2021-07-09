@@ -1979,13 +1979,17 @@ public class FormUtils {
         }
     }
 
+    protected String getLocaleFormIdentity(final Context context, final String formIdentity){
+        String locale = context.getResources().getConfiguration().locale.getLanguage();
+        if (!Locale.ENGLISH.getLanguage().equals(locale)) {
+            return formIdentity + "-" + locale;
+        }
+        return formIdentity;
+    }
+
     private ClientFormContract.Model getClientFormFromRepository(@NonNull Context context, @NonNull ClientFormContract.Dao clientFormRepository, String formIdentity) {
         //Check the current locale of the app to load the correct version of the form in the desired language
-        String locale = context.getResources().getConfiguration().locale.getLanguage();
-        String localeFormIdentity = formIdentity;
-        if (!Locale.ENGLISH.getLanguage().equals(locale)) {
-            localeFormIdentity = localeFormIdentity + "-" + locale;
-        }
+        String localeFormIdentity = getLocaleFormIdentity(context, formIdentity);
 
         ClientFormContract.Model clientForm = clientFormRepository.getActiveClientFormByIdentifier(localeFormIdentity);
 
@@ -2061,13 +2065,8 @@ public class FormUtils {
 
     @Nullable
     public JSONObject getSubFormJsonFromRepository(@NonNull Context context, @NonNull ClientFormContract.Dao clientFormDao, String formIdentity, String subFormsLocation, boolean translateSubForm) throws JSONException {
-        String locale = context.getResources().getConfiguration().locale.getLanguage();
-
         //Check the current locale of the app to load the correct version of the form in the desired language
-        String localeFormIdentity = formIdentity;
-        if (!Locale.ENGLISH.getLanguage().equals(locale)) {
-            localeFormIdentity = localeFormIdentity + "-" + locale;
-        }
+        String localeFormIdentity = getLocaleFormIdentity(context, formIdentity);
 
         String dbFormName = StringUtils.isBlank(subFormsLocation) ? localeFormIdentity : subFormsLocation + "/" + localeFormIdentity;
         ClientFormContract.Model clientForm = clientFormDao.getActiveClientFormByIdentifier(dbFormName);
@@ -2098,13 +2097,8 @@ public class FormUtils {
 
     @Nullable
     public BufferedReader getRulesFromRepository(@NonNull Context context, @NonNull ClientFormContract.Dao clientFormDao, @NonNull String fileName) {
-        String locale = context.getResources().getConfiguration().locale.getLanguage();
-
         //Check the current locale of the app to load the correct version of the form in the desired language
-        String localeFormIdentity = fileName;
-        if (!Locale.ENGLISH.getLanguage().equals(locale)) {
-            localeFormIdentity = localeFormIdentity + "-" + locale;
-        }
+        String localeFormIdentity = getLocaleFormIdentity(context, fileName);
 
         ClientFormContract.Model clientForm = clientFormDao.getActiveClientFormByIdentifier(localeFormIdentity);
         if (clientForm == null && StringUtils.isNotBlank(fileName) && fileName.contains("/") && !fileName.endsWith("/")) {

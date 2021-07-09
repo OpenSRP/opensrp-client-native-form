@@ -4,10 +4,7 @@ import com.vijay.jsonwizard.delegates.JsonWizardFormDelegate;
 
 import org.json.JSONException;
 
-/**
- * Created by keyman on 04/12/2018.
- */
-public class JsonWizardFormActivity extends JsonFormActivity {
+public class FormConfigurationJsonWizardFormActivity extends FormConfigurationJsonFormActivity {
 
     private final JsonWizardFormDelegate delegate = new JsonWizardFormDelegate();
 
@@ -38,4 +35,3 @@ public class JsonWizardFormActivity extends JsonFormActivity {
         delegate.initializeFormFragmentCore(this.getSupportFragmentManager());
     }
 }
-
